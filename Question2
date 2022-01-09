@@ -1,0 +1,32 @@
+package exercise;
+import java.util.Scanner;
+public class Question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		double comission=0;
+		
+		System.out.print("Enter sales       : RM");
+		double sales = sc.nextDouble();
+		
+		System.out.print("Enter hours worked: ");
+		int hours = sc.nextInt();
+		
+		if (sales>=150 && sales<=300) 
+			comission = sales*0.05;
+		else if (sales>=301 && sales<=500)
+			comission = sales*0.1;
+		else if (sales>500)
+			comission = sales*0.15;
+		System.out.printf("\nComission         : RM %.2f%n" , comission);
+		
+		double dailywages = 5*hours;
+		double sum = dailywages + comission;
+		System.out.printf("Daily wages       : RM %.2f%n" , sum);
+		sc.close();
+		
+
+	}
+
+}
